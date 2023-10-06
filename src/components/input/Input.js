@@ -1,23 +1,16 @@
-import { View, Text, Platform, Image } from 'react-native';
 import React from 'react';
+import { Image, View } from 'react-native';
+import InputCustomize from '../inputCustomize/InputCustomize';
 import styles from './styles';
-import { TextInput } from 'react-native';
 
 const Input = ({ placeholder = '', leftIcon, rightIcon, ...props }) => {
     return (
         <View style={styles.container}>
             <Image style={[styles.icon, styles.leftIcon]} source={leftIcon} />
-            <TextInput
+            <InputCustomize
                 placeholder={placeholder}
                 placeholderTextColor='#000'
-                style={[
-                    styles.input,
-                    Platform.OS === 'web'
-                        ? {
-                              outlineStyle: 'none',
-                          }
-                        : {},
-                ]}
+                style={styles.input}
                 {...props}
             />
             {rightIcon && (

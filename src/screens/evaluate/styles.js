@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
     textLarge: {
@@ -7,38 +7,39 @@ const styles = StyleSheet.create({
         lineHeight: 21,
     },
     container: {
-        flex: 1
+        flex: 1,
+        paddingBottom: 20,
     },
     product: {
         padding: 24,
         paddingRight: 5,
         flexDirection: 'row',
         gap: 18,
-        alignItems: 'center'
+        alignItems: 'center',
     },
     productImage: {
         width: 54,
-        height: 49
+        height: 49,
     },
     productName: {
         fontSize: 16,
         fontWeight: 700,
         lineHeight: 19,
-        flex: 1
+        flex: 1,
     },
     text: {
         marginTop: 36,
-        textAlign: 'center'
+        textAlign: 'center',
     },
     starts: {
         marginTop: 18,
         flexDirection: 'row',
         gap: 14,
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
     start: {
         width: 39,
-        height: 39
+        height: 39,
     },
     uploadImage: {
         height: 68,
@@ -50,34 +51,39 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#1511EB',
         borderRadius: 5,
-        gap: 8
+        gap: 8,
     },
     uploadImageIcon: {
         width: 39,
-        height: 32
+        height: 32,
     },
     review: {
         marginTop: 15,
         marginHorizontal: 34,
         borderWidth: 1,
         borderColor: '#C4C4C4',
-        borderRadius: 5
+        borderRadius: 5,
     },
     reviewInput: {
         paddingVertical: 11,
         paddingLeft: 19,
-        paddingRight: 15
+        paddingRight: 15,
     },
     btn: {
+        marginHorizontal: 34,
         justifyContent: 'center',
         alignItems: 'center',
-        height: 41
+        height: 41,
+        backgroundColor: '#0D5DB6',
+        borderRadius: 5,
+        marginTop: 25,
     },
     btnText: {
         fontSize: 20,
         fontWeight: 700,
         lineHeight: 23,
-    }
+        color: '#fff',
+    },
 });
 
-export default styles
+export default styles;
