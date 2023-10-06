@@ -4,7 +4,7 @@ import Evaluate from './src/screens/evaluate/Evaluate';
 
 export default function App() {
   return (
-    <Login />
-    // <Evaluate />
+    // <Login />
+    <Evaluate />
   );
 }
