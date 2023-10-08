@@ -1,14 +1,17 @@
-import { StyleSheet } from 'react-native';
+import { Platform, StatusBar, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
     textLarge: {
         fontSize: 18,
-        fontWeight: 700,
+        fontWeight: '700',
         lineHeight: 21,
+    },
+    flex1: {
+        flex: 1,
     },
     container: {
         flex: 1,
-        paddingBottom: 20,
+        paddingTop: Platform.OS === 'ios' ? 0 : StatusBar.currentHeight,
     },
     product: {
         padding: 24,
@@ -23,9 +26,9 @@ const styles = StyleSheet.create({
     },
     productName: {
         fontSize: 16,
-        fontWeight: 700,
         lineHeight: 19,
         flex: 1,
+        fontWeight: 700,
     },
     text: {
         marginTop: 36,
@@ -58,18 +61,30 @@ const styles = StyleSheet.create({
         height: 32,
     },
     review: {
+        flex: 1,
         marginTop: 15,
         marginHorizontal: 34,
         borderWidth: 1,
         borderColor: '#C4C4C4',
         borderRadius: 5,
+        minHeight: 300,
     },
     reviewInput: {
+        flex: 1,
         paddingVertical: 11,
         paddingLeft: 19,
         paddingRight: 15,
     },
+    meet: {
+        fontWeight: 700,
+        fontSize: 12,
+        lineHeight: 14,
+        textAlign: 'right',
+        marginRight: 14,
+        marginBottom: 5,
+    },
     btn: {
+        marginBottom: 20,
         marginHorizontal: 34,
         justifyContent: 'center',
         alignItems: 'center',
@@ -77,6 +92,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#0D5DB6',
         borderRadius: 5,
         marginTop: 25,
+        borderWidth: 1,
+        borderColor: 'rgba(21, 17, 235, 1)',
     },
     btnText: {
         fontSize: 20,

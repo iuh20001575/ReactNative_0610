@@ -13,7 +13,7 @@ const InputCustomize = ({ style = {}, ...props }) => {
         return styles;
     }, [style]);
 
-    return <TextInput style={styles} {...props} />;
+    return <TextInput textAlignVertical='top' style={styles} {...props} />;
 };
 
 export default InputCustomize;
