@@ -10,7 +10,7 @@ import styles from './styles';
 const Wrapper = ({ children }) => {
     return (
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-            <SafeAreaView style={[styles.flex1]}>
+            <SafeAreaView style={[styles.flex1, styles.container]}>
                 <ScrollView contentContainerStyle={[styles.flex1]}>
                     {children}
                 </ScrollView>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Platform, View } from 'react-native';
 import { RadialGradient } from 'react-native-gradients';
+import styles from './styles';
 
 const RadialGradientCustomize = ({
     x,
@@ -30,17 +31,20 @@ const RadialGradientCustomize = ({
         );
 
     return (
-        <RadialGradient
-            x={x}
-            y={y}
-            rx={rx}
-            ry={ry}
-            colorList={colorList}
-            style={style}
-            {...props}
-        >
-            {children}
-        </RadialGradient>
+        <View style={{ flex: 1, position: 'relative' }}>
+            <View style={[styles.gradientBg]}>
+                <RadialGradient
+                    x={x}
+                    y={y}
+                    rx={rx}
+                    ry={ry}
+                    colorList={colorList}
+                />
+            </View>
+            <View style={style} {...props}>
+                {children}
+            </View>
+        </View>
     );
 };
 

@@ -14,7 +14,7 @@ const TextCustomize = (props) => {
         return [style, font];
     }, [font, props.style]);
 
-    return <Text {...props} style={[...styles]} />;
+    return <Text {...props} style={styles} />;
 };
 
 export default TextCustomize;
