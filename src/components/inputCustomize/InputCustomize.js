@@ -1,7 +1,11 @@
 import React, { useMemo } from 'react';
 import { Platform, TextInput } from 'react-native';
 
-const InputCustomize = ({ style = {}, ...props }) => {
+const InputCustomize = ({
+    textAlignVertical = 'top',
+    style = {},
+    ...props
+}) => {
     const styles = useMemo(() => {
         const styles = Array.isArray(style) ? style : [style];
 
@@ -13,7 +17,13 @@ const InputCustomize = ({ style = {}, ...props }) => {
         return styles;
     }, [style]);
 
-    return <TextInput textAlignVertical='top' style={styles} {...props} />;
+    return (
+        <TextInput
+            textAlignVertical={textAlignVertical}
+            style={styles}
+            {...props}
+        />
+    );
 };
 
 export default InputCustomize;
